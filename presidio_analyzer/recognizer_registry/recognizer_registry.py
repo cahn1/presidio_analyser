@@ -28,6 +28,8 @@ from presidio_analyzer.predefined_recognizers import (
     AuAcnRecognizer,
     AuTfnRecognizer,
     AuMedicareRecognizer,
+    UsTaxIDRecognizer,
+    KrSsnRecognizer,
 )
 
 logger = logging.getLogger("presidio-analyzer")
@@ -75,8 +77,10 @@ class RecognizerRegistry:
                 AuAcnRecognizer,
                 AuTfnRecognizer,
                 AuMedicareRecognizer,
+                UsTaxIDRecognizer,
             ],
             "es": [EsNifRecognizer],
+            "kr": [KrSsnRecognizer],
             "ALL": [
                 CreditCardRecognizer,
                 CryptoRecognizer,

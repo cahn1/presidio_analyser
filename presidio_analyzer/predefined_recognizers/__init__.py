@@ -24,6 +24,8 @@ from .au_abn_recognizer import AuAbnRecognizer
 from .au_acn_recognizer import AuAcnRecognizer
 from .au_tfn_recognizer import AuTfnRecognizer
 from .au_medicare_recognizer import AuMedicareRecognizer
+from .us_taxid_recognizer import UsTaxIDRecognizer
+from .kr_ssn_recognizer import KrSsnRecognizer
 
 NLP_RECOGNIZERS = {"spacy": SpacyRecognizer, "stanza": StanzaRecognizer}
 
@@ -56,4 +58,6 @@ __all__ = [
     "AuAcnRecognizer",
     "AuTfnRecognizer",
     "AuMedicareRecognizer",
+    "UsTaxIDRecognizer",
+    "KrSsnRecognizer",
 ]
