@@ -20,10 +20,14 @@ class CryptoEthereumRecognizer(PatternRecognizer):
     """
 
     PATTERNS = [
-        Pattern("Crypto (Medium)", r"^0x[a-fA-F0-9]{40}$", 0.5),
+        Pattern("Ethereum (Medium)", r"\b0x[a-fA-F0-9]{40}\b", 0.5),
     ]
 
-    CONTEXT = ["wallet", "eth", "ethereum"]
+    CONTEXT = [
+        "ethereum wallet",
+        "eth",
+        "ethereum",
+        "eth wallet"]
 
     def __init__(
         self,
@@ -41,7 +45,7 @@ class CryptoEthereumRecognizer(PatternRecognizer):
             supported_language=supported_language,
         )
 
-    def validate_result(self, pattern_text: str) -> bool:  # noqa D102
+    def validate_result(self, pattern_text: str) -> bool:
         if re.match(r'^(0x)?[0-9a-fA-F]{40}$', pattern_text,
                         flags=re.IGNORECASE):
             return True

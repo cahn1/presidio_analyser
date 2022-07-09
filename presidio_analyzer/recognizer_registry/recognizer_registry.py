@@ -94,6 +94,7 @@ class RecognizerRegistry:
                 nlp_recognizer,
                 PhoneRecognizer,
                 UrlRecognizer,
+                KrSsnRecognizer,
             ],
         }
         for lang in languages:
